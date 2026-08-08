@@ -39,7 +39,7 @@ add_library(cpp_transport::cpp_transport ALIAS cpp_transport)
 
 target_include_directories(cpp_transport
     PUBLIC
-        $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/src>
+    $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/include>
         $<INSTALL_INTERFACE:${CMAKE_INSTALL_INCLUDEDIR}>
 )
 
@@ -54,7 +54,7 @@ install(
 )
 
 install(
-    DIRECTORY src/
+    DIRECTORY include/
     DESTINATION ${CMAKE_INSTALL_INCLUDEDIR}
     FILES_MATCHING PATTERN "*.h"
 )

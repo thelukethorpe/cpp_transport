@@ -1,8 +1,8 @@
-#ifndef IN_MEMORY_NETWORK_H
-#define IN_MEMORY_NETWORK_H
+#ifndef CPP_TRANSPORT_IN_MEMORY_NETWORK_H
+#define CPP_TRANSPORT_IN_MEMORY_NETWORK_H
 
-#include "in_memory_client_transport.h"
-#include "in_memory_server_transport.h"
+#include <cpp_transport/in_memory_client_transport.h>
+#include <cpp_transport/in_memory_server_transport.h>
 
 struct InMemoryNetworkBuffers
 {

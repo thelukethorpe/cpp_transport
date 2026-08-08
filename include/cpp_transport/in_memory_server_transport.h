@@ -1,7 +1,7 @@
-#ifndef IN_MEMORY_SERVER_TRANSPORT_H
-#define IN_MEMORY_SERVER_TRANSPORT_H
+#ifndef CPP_TRANSPORT_IN_MEMORY_SERVER_TRANSPORT_H
+#define CPP_TRANSPORT_IN_MEMORY_SERVER_TRANSPORT_H
 
-#include "transport.h"
+#include <cpp_transport/transport.h>
 #include <map>
 #include <memory>
 

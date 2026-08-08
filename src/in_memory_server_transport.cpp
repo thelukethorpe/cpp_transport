@@ -1,5 +1,5 @@
-#include "in_memory_server_transport.h"
-#include "in_memory_network.h"
+#include <cpp_transport/in_memory_network.h>
+#include <cpp_transport/in_memory_server_transport.h>
 
 InMemoryServerTransport::InMemoryServerTransport(const Args &args,
                                                  ServerTransportCallbacks callbacks)
