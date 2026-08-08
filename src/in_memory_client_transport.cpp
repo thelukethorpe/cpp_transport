@@ -1,5 +1,8 @@
-#include <cpp_transport/in_memory_client_transport.h>
-#include <cpp_transport/in_memory_network.h>
+#include <filthyrat/transport/in_memory_client_transport.h>
+#include <filthyrat/transport/in_memory_network.h>
+
+namespace filthyrat
+{
 
 InMemoryClientTransport::InMemoryClientTransport(const Args &args,
                                                  ClientTransportCallbacks callbacks)
@@ -63,3 +66,5 @@ void InMemoryClientTransport::disconnectImpl()
         callbacks_.on_disconnected();
     }
 }
+
+} // namespace filthyrat

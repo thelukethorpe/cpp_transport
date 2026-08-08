@@ -1,11 +1,13 @@
-#include <cpp_transport/in_memory_client_transport.h>
-#include <cpp_transport/in_memory_network.h>
-#include <cpp_transport/in_memory_server_transport.h>
 #include <cstddef>
 #include <doctest/doctest.h>
+#include <filthyrat/transport/in_memory_client_transport.h>
+#include <filthyrat/transport/in_memory_network.h>
+#include <filthyrat/transport/in_memory_server_transport.h>
 #include <memory>
 #include <set>
 #include <vector>
+
+using namespace filthyrat;
 
 TEST_CASE("In-memory transport client-server communication")
 {

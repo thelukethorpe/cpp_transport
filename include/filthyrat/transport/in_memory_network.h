@@ -1,8 +1,11 @@
 #ifndef CPP_TRANSPORT_IN_MEMORY_NETWORK_H
 #define CPP_TRANSPORT_IN_MEMORY_NETWORK_H
 
-#include <cpp_transport/in_memory_client_transport.h>
-#include <cpp_transport/in_memory_server_transport.h>
+#include "in_memory_client_transport.h"
+#include "in_memory_server_transport.h"
+
+namespace filthyrat
+{
 
 struct InMemoryNetworkBuffers
 {
@@ -31,5 +34,7 @@ class InMemoryNetwork
     void closeServer(ServerConnectionId server_id);
     std::vector<ClientConnectionId> getClientsConnectedToServer(ServerConnectionId server_id);
 };
+
+} // namespace filthyrat
 
 #endif

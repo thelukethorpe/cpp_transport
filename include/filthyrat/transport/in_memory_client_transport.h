@@ -1,8 +1,11 @@
 #ifndef CPP_TRANSPORT_IN_MEMORY_CLIENT_TRANSPORT_H
 #define CPP_TRANSPORT_IN_MEMORY_CLIENT_TRANSPORT_H
 
-#include <cpp_transport/transport.h>
+#include "transport.h"
 #include <memory>
+
+namespace filthyrat
+{
 
 class InMemoryNetwork;
 
@@ -52,5 +55,7 @@ class InMemoryClientTransport : public ClientTransport
 
     void disconnectImpl();
 };
+
+} // namespace filthyrat
 
 #endif

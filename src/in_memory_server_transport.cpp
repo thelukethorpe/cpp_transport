@@ -1,5 +1,8 @@
-#include <cpp_transport/in_memory_network.h>
-#include <cpp_transport/in_memory_server_transport.h>
+#include <filthyrat/transport/in_memory_network.h>
+#include <filthyrat/transport/in_memory_server_transport.h>
+
+namespace filthyrat
+{
 
 InMemoryServerTransport::InMemoryServerTransport(const Args &args,
                                                  ServerTransportCallbacks callbacks)
@@ -134,3 +137,5 @@ void InMemoryServerTransport::closeImpl()
 
     network_->closeServer(connection_id_);
 }
+
+} // namespace filthyrat

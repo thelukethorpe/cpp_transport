@@ -1,9 +1,12 @@
 #ifndef CPP_TRANSPORT_IN_MEMORY_SERVER_TRANSPORT_H
 #define CPP_TRANSPORT_IN_MEMORY_SERVER_TRANSPORT_H
 
-#include <cpp_transport/transport.h>
+#include "transport.h"
 #include <map>
 #include <memory>
+
+namespace filthyrat
+{
 
 class InMemoryNetwork;
 
@@ -46,5 +49,7 @@ class InMemoryServerTransport : public ServerTransport
     void connectClient(ClientConnectionId client_id);
     void closeImpl();
 };
+
+} // namespace filthyrat
 
 #endif

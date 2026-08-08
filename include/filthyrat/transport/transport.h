@@ -6,6 +6,9 @@
 #include <span>
 #include <vector>
 
+namespace filthyrat
+{
+
 using ClientConnectionId = std::size_t;
 using ServerConnectionId = std::size_t;
 
@@ -54,5 +57,7 @@ struct ServerTransportCallbacks
     std::function<void(ClientConnectionId)> on_client_connected;
     std::function<void(ClientConnectionId)> on_client_disconnected;
 };
+
+} // namespace filthyrat
 
 #endif

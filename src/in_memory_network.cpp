@@ -1,4 +1,7 @@
-#include <cpp_transport/in_memory_network.h>
+#include <filthyrat/transport/in_memory_network.h>
+
+namespace filthyrat
+{
 
 bool InMemoryNetwork::tryConnectClientToServer(const ClientServerPair &client_server_pair)
 {
@@ -75,3 +78,5 @@ InMemoryNetwork::getClientsConnectedToServer(ServerConnectionId server_id)
 
     return client_ids;
 }
+
+} // namespace filthyrat
