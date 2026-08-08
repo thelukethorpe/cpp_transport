@@ -89,7 +89,13 @@ install(
 
 include(CTest)
 
-if(BUILD_TESTING)
+option(
+    CPP_TRANSPORT_BUILD_TESTS
+    "Build cpp_transport tests"
+    ${PROJECT_IS_TOP_LEVEL}
+)
+
+if(BUILD_TESTING AND CPP_TRANSPORT_BUILD_TESTS)
     include(FetchContent)
 
     set(DOCTEST_NO_INSTALL ON CACHE BOOL "Disable doctest install rules" FORCE)
@@ -105,11 +111,11 @@ if(BUILD_TESTING)
         tests/*.cpp
     )
 
-    add_executable(tests ${TEST_SOURCES})
-    target_link_libraries(tests PRIVATE doctest cpp_transport)
+    add_executable(cpp_transport_tests ${TEST_SOURCES})
+    target_link_libraries(cpp_transport_tests PRIVATE doctest cpp_transport)
 
     add_test(
-        NAME all_test
-        COMMAND tests
+        NAME cpp_transport_all_test
+        COMMAND cpp_transport_tests
     )
 endif()

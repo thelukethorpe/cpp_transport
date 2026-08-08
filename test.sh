@@ -2,4 +2,4 @@
 
 cd build || exit 1
 
-./tests --output-on-failure
+./cpp_transport_tests --output-on-failure
