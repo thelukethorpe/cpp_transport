@@ -54,6 +54,11 @@ std::vector<std::byte> TcpClientTransport::receive()
     return buffer;
 }
 
+void TcpClientTransport::tick()
+{
+    // TODO: socket pooling?
+}
+
 void TcpClientTransport::disconnect() { this->disconnectImpl(); }
 
 void TcpClientTransport::disconnectImpl()
